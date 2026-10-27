@@ -63,8 +63,9 @@ class Store:
                     if os.path.exists(temporary):
                         os.unlink(temporary)
 
-    def observe(self, snapshot):
+    def observe(self, read_snapshot):
         with self.transaction() as data:
+            snapshot = read_snapshot()
             workspace_ids = {w["workspace_id"] for w in snapshot["workspaces"]}
             data["workspaces"] = {k: v for k, v in data["workspaces"].items() if k in workspace_ids}
             live = set()
@@ -107,7 +108,7 @@ class Store:
                 pane = data["panes"][focus]
                 pane["reviewed"] = pane.get("completed")
             data["focused_pane"] = focus
-            return self.view(snapshot, data)
+            return self.view(snapshot, data), snapshot
 
     def view(self, snapshot, data):
         result = []

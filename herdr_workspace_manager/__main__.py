@@ -32,13 +32,14 @@ def main():
         elif args.watch:
             while True:
                 try:
-                    store.observe(api.snapshot())
+                    store.observe(api.snapshot)
                 except (HerdrError, OSError, ValueError) as error:
                     print(error, file=sys.stderr, flush=True)
                     time.sleep(5)
                 time.sleep(0.6)
         elif args.dump:
-            print(json.dumps(store.observe(api.snapshot()), indent=2, ensure_ascii=True))
+            workspaces, _ = store.observe(api.snapshot)
+            print(json.dumps(workspaces, indent=2, ensure_ascii=True))
         else:
             api.snapshot()
             curses.wrapper(Picker(api, store).run)

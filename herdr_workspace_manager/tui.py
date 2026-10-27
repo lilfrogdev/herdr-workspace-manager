@@ -50,8 +50,8 @@ class Picker:
         while not self.stop.is_set():
             revision = self.revision
             try:
-                snapshot = self.api.snapshot()
-                update = (revision, self.store.observe(snapshot), snapshot, None)
+                workspaces, snapshot = self.store.observe(self.api.snapshot)
+                update = (revision, workspaces, snapshot, None)
             except (HerdrError, OSError, ValueError) as error:
                 update = (revision, None, None, str(error))
             try:
@@ -167,8 +167,7 @@ class Picker:
                 self.mode = "list"
                 self.deleting = None
                 self.revision += 1
-                self.snapshot = self.api.snapshot()
-                self.workspaces = self.store.observe(self.snapshot)
+                self.workspaces, self.snapshot = self.store.observe(self.api.snapshot)
                 target = next((w for w in self.workspaces if w["workspace_id"] == workspace_id), None)
                 if target is None:
                     self.message = "Workspace no longer exists"
