@@ -1,0 +1,14 @@
+[Unit]
+Description=Observe activity in the default Herdr session for workspace attention metadata
+
+[Service]
+Type=simple
+Environment=HERDR_ENV=1
+Environment=HERDR_SOCKET_PATH=%h/.config/herdr/herdr.sock
+ExecStart=%h/.local/bin/herdr-workspace-manager --watch
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=default.target
