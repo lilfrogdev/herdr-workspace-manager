@@ -1,0 +1,21 @@
+{
+  "_source": "Herdr v0.9.5 src/app/state.rs Palette",
+  "catppuccin": {"accent":"#89b4fa","panel_bg":"#181825","active_row_bg":"#1e1e2e","selection_bg":"#313244","overlay0":"#6c7086","text":"#cdd6f4","subtext0":"#a6adc8","green":"#a6e3a1","yellow":"#f9e2af","red":"#f38ba8","teal":"#94e2d5"},
+  "catppuccin-latte": {"accent":"#1e66f5","panel_bg":"#eff1f5","active_row_bg":"#e6e9ef","selection_bg":"#bdd0f5","overlay0":"#9ca0b0","text":"#4c4f69","subtext0":"#6c6f85","green":"#40a02b","yellow":"#df8e1d","red":"#d20f39","teal":"#179299"},
+  "terminal": {"accent":"blue","panel_bg":"reset","active_row_bg":"dark-gray","selection_bg":"reset","overlay0":"gray","text":"reset","subtext0":"gray","green":"green","yellow":"yellow","red":"light-red","teal":"cyan"},
+  "tokyo-night": {"accent":"#7aa2f7","panel_bg":"#1a1b26","active_row_bg":"#232636","selection_bg":"#2d3650","overlay0":"#565f89","text":"#c0caf5","subtext0":"#a9b1d6","green":"#9ece6a","yellow":"#e0af68","red":"#f7768e","teal":"#7dcfff"},
+  "tokyo-night-day": {"accent":"#2e7de9","panel_bg":"#e1e2e7","active_row_bg":"#d2d3da","selection_bg":"#b6cae7","overlay0":"#8990b3","text":"#3760bf","subtext0":"#6172b0","green":"#587539","yellow":"#8c6c3e","red":"#f52a65","teal":"#118c74"},
+  "dracula": {"accent":"#bd93f9","panel_bg":"#282a36","active_row_bg":"#373c52","selection_bg":"#463f5d","overlay0":"#6272a4","text":"#f8f8f2","subtext0":"#d2d2dc","green":"#50fa7b","yellow":"#f1fa8c","red":"#ff5555","teal":"#8be9fd"},
+  "nord": {"accent":"#88c0d0","panel_bg":"#2e3440","active_row_bg":"#434c5e","selection_bg":"#40505d","overlay0":"#4c566a","text":"#eceff4","subtext0":"#d8dee9","green":"#a3be8c","yellow":"#ebcb8b","red":"#bf616a","teal":"#8fbcbb"},
+  "gruvbox": {"accent":"#d79921","panel_bg":"#282828","active_row_bg":"#323130","selection_bg":"#4b3f27","overlay0":"#928374","text":"#ebdbb2","subtext0":"#d5c4a1","green":"#b8bb26","yellow":"#fabd2f","red":"#fb4934","teal":"#8ec07c"},
+  "gruvbox-light": {"accent":"#076678","panel_bg":"#fbf1c7","active_row_bg":"#f2e5bc","selection_bg":"#ebdbb2","overlay0":"#928374","text":"#3c3836","subtext0":"#504945","green":"#79740e","yellow":"#b57614","red":"#9d0006","teal":"#427b58"},
+  "one-dark": {"accent":"#61afef","panel_bg":"#282c34","active_row_bg":"#313640","selection_bg":"#334659","overlay0":"#5c6370","text":"#abb2bf","subtext0":"#969ca8","green":"#98c379","yellow":"#e5c07b","red":"#e06c75","teal":"#56b6c2"},
+  "one-light": {"accent":"#4078f2","panel_bg":"#fafafa","active_row_bg":"#d8dbe2","selection_bg":"#cddbf8","overlay0":"#a0a1a7","text":"#383a42","subtext0":"#686b77","green":"#50a14f","yellow":"#c18401","red":"#e45649","teal":"#0184bc"},
+  "solarized": {"accent":"#268bd2","panel_bg":"#002b36","active_row_bg":"#164b57","selection_bg":"#083e55","overlay0":"#586e75","text":"#93a1a1","subtext0":"#839496","green":"#859900","yellow":"#b58900","red":"#dc322f","teal":"#2aa198"},
+  "solarized-light": {"accent":"#268bd2","panel_bg":"#fdf6e3","active_row_bg":"#eee8d5","selection_bg":"#c9dcdf","overlay0":"#93a1a1","text":"#657b83","subtext0":"#839496","green":"#859900","yellow":"#b58900","red":"#dc322f","teal":"#2aa198"},
+  "kanagawa": {"accent":"#7e9cd8","panel_bg":"#1f1f28","active_row_bg":"#363646","selection_bg":"#32384b","overlay0":"#727169","text":"#dcd7ba","subtext0":"#c8c3aa","green":"#76946a","yellow":"#c0a36e","red":"#c34043","teal":"#7fb4ca"},
+  "kanagawa-lotus": {"accent":"#4d699b","panel_bg":"#f2ecbc","active_row_bg":"#d5cea3","selection_bg":"#dcd5ac","overlay0":"#a09cac","text":"#545464","subtext0":"#43436c","green":"#6f894e","yellow":"#77713f","red":"#c84053","teal":"#4e8ca2"},
+  "rose-pine": {"accent":"#c4a7e7","panel_bg":"#191724","active_row_bg":"#26233a","selection_bg":"#3b344b","overlay0":"#6e6a86","text":"#e0def4","subtext0":"#c8c5dc","green":"#31748f","yellow":"#f6c177","red":"#eb6f92","teal":"#9ccfd8"},
+  "rose-pine-dawn": {"accent":"#907aa9","panel_bg":"#faf4ed","active_row_bg":"#e3d9cf","selection_bg":"#f2e9e1","overlay0":"#9893a5","text":"#464261","subtext0":"#797593","green":"#286983","yellow":"#ea9d34","red":"#b4637a","teal":"#56949f"},
+  "vesper": {"accent":"#ffc799","panel_bg":"#1a1a1a","active_row_bg":"#101010","selection_bg":"#232323","overlay0":"#5c5c5c","text":"#ffffff","subtext0":"#a0a0a0","green":"#99ffe4","yellow":"#ffc799","red":"#ff8080","teal":"#66ddcc"}
+}

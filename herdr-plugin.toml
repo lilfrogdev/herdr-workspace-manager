@@ -1,0 +1,18 @@
+id = "herdr-workspace-manager"
+name = "Workspace Manager"
+version = "1.0.0"
+min_herdr_version = "0.9.1"
+platforms = ["linux"]
+
+[[actions]]
+id = "open"
+title = "Workspace Manager"
+command = ["sh", "-c", "exec \"${HERDR_BIN_PATH:-herdr}\" plugin pane open --plugin herdr-workspace-manager --entrypoint picker"]
+
+[[panes]]
+id = "picker"
+title = "Workspace Manager"
+placement = "popup"
+width = "50%"
+height = "45%"
+command = ["./bin/herdr-workspace-manager"]
