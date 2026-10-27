@@ -1,10 +1,22 @@
 # herdr-workspace-manager
 
-A keyboard-driven workspace picker for Herdr. Switch between projects, see which agents need attention, create workspaces, and archive work you want out of the way.
+A compact, keyboard-driven workspace picker for Herdr.
 
 ## Usage
 
-Open with **Ctrl+Space, then Space**, or run `herdr-workspace-manager` inside Herdr.
+Open with **`prefix+space`**, or run `herdr-workspace-manager` inside Herdr.
+
+![Workspace Manager showing Needs attention, Working, Idle, and Archived groups, with a three-pane preview of Pi awaiting input, Neovim, and a terminal](docs/images/overview.png)
+
+Preview apps and pane layouts without switching focus or reading terminal contents. Colors follow your Herdr theme; use a Nerd Font for app icons.
+
+### Every state
+
+![Keyboard walkthrough of an approval request, completed Codex result, reported failure, working Claude agent, idle terminal, and archived workspace](docs/images/states.gif)
+
+Sample environments: **input needed → result ready → failed → working → idle → archived**.
+
+### Keys
 
 | Key | Action |
 | --- | --- |
@@ -18,23 +30,15 @@ Open with **Ctrl+Space, then Space**, or run `herdr-workspace-manager` inside He
 | `d` | Delete an archived workspace (with confirmation) |
 | `p` | Hide/show the layout preview |
 
-Workspaces are grouped into **Needs attention**, **Working**, **Idle**, and **Archived**, with live status updates. Only groups expand; workspace rows show just their icon and name. Colors and status icons follow your Herdr theme and preferences.
-
-The right-hand preview is on by default and follows the highlighted workspace's active tab. Each pane shows a Nerd Font app/harness icon, a short name, its directory, and an attention reason when needed. Icons stay neutral; borders show status and highlight the focused pane. App identity comes from Herdr's agent and foreground-process information, not terminal text or titles. Use a Nerd Font for the icons; names remain readable without one.
-
-Press `p` to hide/show the preview; it also hides in narrow popups. Previewing never changes focus or marks results reviewed, and no terminal contents are read.
-
-Focusing a completed agent's pane marks its result reviewed. Input and approval requests stay pending until resolved. Opening the picker does not clear attention.
-
-Archiving only hides a workspace from the active groups; its processes keep running. New attention brings it back automatically, but working activity alone does not.
-
-On an archived workspace, press `d`, then `y` to delete it. This closes its panes and stops their processes. Enter or Esc cancels. If new attention unarchives it during confirmation, deletion is cancelled.
+- **Review:** focus a completed agent's pane to mark it reviewed. Opening the picker does not clear attention; input/approval requests stay pending until resolved.
+- **Archive:** processes keep running. New attention brings the workspace back; working activity alone does not.
+- **Delete:** on an archived workspace, press `d`, then `y`. This stops its processes. Enter or Esc cancels, as does new attention during confirmation.
 
 ### Create a workspace
 
-Press `n` to browse directories, starting at `~/Repositories`. Use `j/k` to move, `l` or Enter to open a directory, `h` to go up, and Space to select. Press `r` for recent directories and starting points.
+![Choosing new-project in the directory browser, then confirming the workspace name](docs/images/create-workspace.gif)
 
-Confirm or edit the name, then Enter to create and focus a workspace with a single terminal. Esc cancels without creating anything.
+`n` → browse with `j/k`, `↵/l`, and `h` → `Space` to select → edit the name → `Enter` to create and jump. `r` shows recent directories; Esc cancels.
 
 ## Install
 
@@ -53,7 +57,7 @@ config="${HERDR_CONFIG_PATH:-$HOME/.config/herdr/config.toml}"
 cp -a "$config" "$config.bak.$(date +%Y%m%d-%H%M%S)"
 ```
 
-Keep your existing Ctrl+Space prefix and add this binding:
+Keep your existing Herdr prefix and add this binding:
 
 ```toml
 [[keys.command]]
